@@ -39,5 +39,11 @@
     "@dashkite/genie": "link:../genie",
     "@dashkite/genie-coffee": "link:../genie-coffee",
     "@dashkite/genie-modules": "link:../genie-modules"
+  },
+  "dependencies": {
+    "@dashkite/http-headers": "link:../http-headers",
+    "@dashkite/runes-client": "link:../runes-client",
+    "@dashkite/talos": "link:../talos",
+    "panda-confidential": "^3.1.2"
   }
 }

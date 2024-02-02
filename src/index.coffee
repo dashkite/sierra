@@ -1,7 +1,8 @@
-Credentials = 
+import Build from "./build"
 
-  # TODO
-  build: ->
+Credentials = 
+  build: Build.start
+
 
 export default Credentials
 export { Credentials }
