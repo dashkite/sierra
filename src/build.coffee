@@ -18,7 +18,7 @@ Run =
     for current from Rune.find resource, options
       yield current
     if current.failure
-      throw current.failure
+      throw current.error
     talos.context.credentials = current.context.credentials 
 
   encodeCredentials: ( talos ) ->
