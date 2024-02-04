@@ -25,7 +25,7 @@ Run =
     talos.context.credentials = Credential.encode talos.context.credentials
 
 
-machine = Machine.make "build",
+machine = Machine.make "sierra: build",
   start:
     buildRune: When.targetsRune
     default: "noBuild"

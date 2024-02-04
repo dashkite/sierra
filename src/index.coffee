@@ -1,8 +1,15 @@
 import Build from "./build"
+import { When, Get } from "./holon"
 
-Credentials = 
-  build: Build.start
-
+Credentials = {
+  Build
+  When
+  Get  
+}
 
 export default Credentials
-export { Credentials }
+export {
+  Build
+  When
+  Get
+}
