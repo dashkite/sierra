@@ -43,7 +43,7 @@
     "@dashkite/genie-release": "^0.2.8"
   },
   "dependencies": {
-    "@dashkite/http-headers": "link:../http-headers",
+    "@dashkite/http-headers": "0.6.0",
     "@dashkite/runes-client": "link:../runes-client",
     "@dashkite/talos": "0.1.0",
     "panda-confidential": "^3.1.2"
