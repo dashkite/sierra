@@ -12,8 +12,8 @@ importers:
         specifier: 0.8.0
         version: 0.8.0
       '@dashkite/runes-client':
-        specifier: link:../runes-client
-        version: link:../runes-client
+        specifier: 0.3.0
+        version: 0.3.0
       '@dashkite/talos':
         specifier: 0.3.0
         version: 0.3.0
@@ -633,6 +633,9 @@ packages:
   '@dashkite/joy@0.6.0':
     resolution: {integrity: sha512-6lFhlzHQ3SWqD1o8RcT6prWmiU5KHhdmG/t8AaGChRfYCYOahDmmLtaglMmpNJVWnve8nFL7BBC03+hnTl9HUw==}
 
+  '@dashkite/joy@0.7.0':
+    resolution: {integrity: sha512-1sldJtFRJJwwm1yb2vrhUNvs9ns30ROS5E7KwBTkJ+yPVNsbgIFbakYn7AQSaEsLs/ZdqbHW7dWx+Wo/uG4D7w==}
+
   '@dashkite/kaiko@0.3.3':
     resolution: {integrity: sha512-XnAvVr9y2MsDqMLr4A24vkLF7Iuq3E8RjHEEpqhe29P5NevVX9jXKcXUStNMp9MSJbjHd2pqUNiM5Vvdja9ggg==}
 
@@ -653,6 +656,9 @@ packages:
 
   '@dashkite/parse@0.4.3':
     resolution: {integrity: sha512-bE0kBjaGYjUnCzWJelQnx8vsfJ9YP07aRTVFZoY7TZWvMmnihoCSugL4IVWAOA2O0EAZXjT8FcjA4bNJ/BQwwg==}
+
+  '@dashkite/runes-client@0.3.0':
+    resolution: {integrity: sha512-8bKgopN+j1tgBaQhv/YetnwRb1SPaz2GKlcx1dVD73OgNrOOKCQC63Br1NYdi61VVCX4yeHAbPTOVXjkuUlNsg==}
 
   '@dashkite/scan@0.2.0':
     resolution: {integrity: sha512-Ihzyw90G+RAB7ietzrEZHDivqwsr4HdCm9LSUGKLFERN26RNvXmLp8CEE1OCkucH6ipfmDSF/ga8OVxxp0gGAw==}
@@ -2204,6 +2210,8 @@ snapshots:
 
   '@dashkite/joy@0.6.0': {}
 
+  '@dashkite/joy@0.7.0': {}
+
   '@dashkite/kaiko@0.3.3': {}
 
   '@dashkite/lru-cache@0.1.0': {}
@@ -2239,6 +2247,11 @@ snapshots:
   '@dashkite/parse@0.4.3':
     dependencies:
       '@dashkite/joy': 0.3.16
+
+  '@dashkite/runes-client@0.3.0':
+    dependencies:
+      '@dashkite/joy': 0.7.0
+      panda-confidential: 3.1.2
 
   '@dashkite/scan@0.2.0':
     dependencies:

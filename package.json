@@ -44,7 +44,7 @@
   },
   "dependencies": {
     "@dashkite/http-headers": "0.8.0",
-    "@dashkite/runes-client": "link:../runes-client",
+    "@dashkite/runes-client": "0.3.0",
     "@dashkite/talos": "0.3.0",
     "panda-confidential": "^3.1.2"
   }
