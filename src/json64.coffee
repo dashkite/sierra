@@ -1,14 +1,7 @@
-import { confidential } from "panda-confidential"
-
-Confidential = confidential()
-
+import { convert } from "@dashkite/bake"
 
 JSON64 =
-  nonce: ->
-    Confidential.convert
-      from: "bytes"
-      to: "base64"
-      await Confidential.randomBytes 4
+
   encode: (value) ->
     Confidential.convert
       from: "utf8"

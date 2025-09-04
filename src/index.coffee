@@ -1,15 +1,16 @@
-import Build from "./build"
-import { When, Get } from "./holon"
+import Scout from "@dashkite/scout"
+import Rune from "./rune"
+import Credentials from "./credentials"
+import Registry from "./registry"
 
-Credentials = {
-  Build
-  When
-  Get  
-}
+# Sky locator provider
+provider =
+  decode: ( url ) ->
+    api = await Scout.discover url.origin
+    Scout.decode url.target, api
 
-export default Credentials
-export {
-  Build
-  When
-  Get
-}
+registry = Registry.make()
+registry.add "rune", Rune.make provider
+registry.add "credentials", Credentials.make registry
+
+export default registry

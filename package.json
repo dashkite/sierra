@@ -44,9 +44,9 @@
     "@dashkite/genie-release": "^0.5.0"
   },
   "dependencies": {
+    "@dashkite/bake": "^0.0.6",
     "@dashkite/http-headers": "^0.8.0",
     "@dashkite/runes-client": "^0.3.0",
-    "@dashkite/talos": "^0.3.0",
-    "panda-confidential": "^3.1.2"
+    "@dashkite/scout": "^0.8.14"
   }
 }
