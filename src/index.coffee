@@ -1,16 +1,6 @@
-import Scout from "@dashkite/scout"
 import Rune from "./rune"
 import Credentials from "./credentials"
 import Registry from "./registry"
 
-# Sky locator provider
-provider =
-  decode: ( url ) ->
-    api = await Scout.discover url.origin
-    Scout.decode url.target, api
-
-registry = Registry.make()
-registry.add "rune", Rune.make provider
-registry.add "credentials", Credentials.make registry
-
-export default registry
+export { Rune, Credentials, Registry }
+export default Registry

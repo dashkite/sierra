@@ -1,7 +1,7 @@
 import { Authorization } from "@dashkite/http-headers"
 import JSON64 from "./json64"
 
-Provider = 
+class Provider
 
   @make: ( registry ) ->
     Object.assign ( new @ ), { registry }
@@ -25,7 +25,5 @@ Provider =
         scheme mismatch,
         got [ #{ authorization.scheme } ]
         expected [ credentials ]"
-
-
 
 export default Provider

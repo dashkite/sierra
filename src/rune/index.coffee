@@ -1,10 +1,10 @@
 import { Authorization } from "@dashkite/http-headers"
-import Runes from "@dashkite/runes-client"
+import * as Runes from "@dashkite/runes-client"
 import Credentials from "../credentials"
 
-Provider =
+class Provider
 
-  @make: @make: ({ provider }) ->
+  @make: ({ provider }) ->
     Object.assign ( new @ ), { provider }
 
   @encode: ({ rune, nonce }) ->
