@@ -7,11 +7,15 @@ class Provider
     Object.assign ( new @ ), { registry }
 
   @encode: ( credentials ) ->
-    Authorization.format
-      scheme: "credentials"
-      token: JSON64.encode credentials
+    Authorization.format @bundle credentials
 
-  find: ({ request, identity }) ->
+  @bundle: ( credentials ) ->
+    scheme: "credentials"
+    token: JSON64.encode credentials
+
+  matches: -> false
+
+  get: ->
 
   store: ( authorization ) ->
     if authorization.scheme == "credentials"

@@ -4,22 +4,26 @@ import Credentials from "../credentials"
 
 class Provider
 
-  @make: ({ provider }) ->
-    Object.assign ( new @ ), { provider }
+  @make: ({ locator }) ->
+    Object.assign ( new @ ), { locator: locator }
 
   @encode: ({ rune, nonce }) ->
     Authorization.format
       scheme: "rune"
       parameters: { rune, nonce }
 
-  find: ({ request, identity }) ->
-    resource = await @provider.decode request.url
-    resources = [ resource ]
+  matches: ( query ) ->
+    query.identity? && query.url? && query.method?
+
+  get: ({ query }) ->
+    { identity, url, method } = query
+    { domain, name } = await @locator.decode url
+    resources = [ name ]
     runes = []
     seen = new Set
     while resources.length > 0
       resource = resources.shift()
-      if ( result = Runes.lookup { identity, resource... })?
+      if ( result = Runes.lookup { identity, domain, resource, method })?
         if !( seen.has result.credential.rune )
           seen.add result.credential.rune
           runes.push result.credential
@@ -28,7 +32,7 @@ class Provider
         runes = []
         break
     if runes.length > 0
-      Credentials.encode ( runes.map @constructor.encode )
+      Credentials.bundle ( runes.map @constructor.encode )
           
   store: ( authorization ) ->
     if authorization.scheme == "rune"

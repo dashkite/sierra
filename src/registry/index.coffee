@@ -1,25 +1,43 @@
 import { metaclass } from "@dashkite/joy/metaclass"
+import { Authorization } from "@dashkite/http-headers"
+import Generic from "@dashkite/generic"
 class Registry extends metaclass()
 
   @make: ->
-    Object.assign ( new @ ), registry: {}
+    Object.assign ( new @ ), registry: []
 
   @getters
-    schemes: -> new Set Object.keys @registry
+    schemes: -> new Set @registry.map ({ scheme }) -> scheme
 
   add: ( scheme, provider ) ->
-    @registry[ scheme ] = provider
+    @registry.push { scheme, provider... }
     
-  get: ( scheme ) ->
-    if ( provider = @registry[ scheme ])?
-      provider
-    else
-      throw new Error "sierra: 
-        missing provider for 
-        [ #{ scheme  } ]"
+  supported: ( challenges ) ->
+    schemes = @schemes
+    challenges.filter ( challenge ) ->
+      schemes.has challenge.scheme
 
-  supported: ( schemes ) ->
-    @schemes.intersection new Set schemes
-
+  query: ({ challenge, query }) ->
+    @registry.find ( provider ) ->
+      ( provider.scheme == challenge.scheme ) && 
+        ( provider.matches query )
+        
+  get: ({ challenge, query }) ->
+    if ( provider = @query { challenge, query })?
+      provider.get { challenge, query }
       
+  authorization: do ->
+    ( Generic.make "Registry.authorization" )
+
+      .define [ Object ], ( specifier ) ->
+        if ( credential = @get specifier )?
+          Authorization.format credential
+
+      .define [ Array ], ( specifiers ) ->
+        for specifier in specifiers
+          if ( authorization = @authorization specifier )?
+            break
+        authorization
+
+
 export default Registry
