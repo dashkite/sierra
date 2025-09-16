@@ -21,6 +21,14 @@
     ".": {
       "browser": "./build/browser/src/index.js",
       "node": "./build/node/src/index.js"
+    },
+    "./rune": {
+      "browser": "./build/browser/src/rune/index.js",
+      "node": "./build/node/src/rune/index.js"      
+    },
+    "./credentials": {
+      "browser": "./build/browser/src/credentials/index.js",
+      "node": "./build/node/src/credentials/index.js"      
     }
   },
   "main": "build/node/src/index.js",
