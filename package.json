@@ -55,7 +55,7 @@
     "@dashkite/bake": "^0.0.6",
     "@dashkite/generic": "^0.9.16",
     "@dashkite/http-headers": "link:../http-headers",
-    "@dashkite/joy": "link:../joy",
+    "@dashkite/joy": "^0.12.21",
     "@dashkite/runes-client": "^0.5.16",
     "@dashkite/scout": "^0.8.16"
   }
