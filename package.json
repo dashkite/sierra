@@ -48,15 +48,15 @@
     "@dashkite/genie": "^0.20.18",
     "@dashkite/genie-clean": "^0.9.0",
     "@dashkite/genie-coffee": "^0.9.0",
-    "@dashkite/genie-module": "^0.5.46",
-    "@dashkite/genie-release": "^0.5.5"
+    "@dashkite/genie-module": "^0.5.47",
+    "@dashkite/genie-release": "^0.5.6"
   },
   "dependencies": {
     "@dashkite/bake": "^0.0.6",
-    "@dashkite/generic": "^0.9.22",
-    "@dashkite/http-headers": "^0.12.42",
-    "@dashkite/joy": "^0.12.30",
-    "@dashkite/runes-client": "^0.5.21",
-    "@dashkite/scout": "^0.8.22"
+    "@dashkite/generic": "^0.9.23",
+    "@dashkite/http-headers": "^0.12.43",
+    "@dashkite/joy": "^0.12.31",
+    "@dashkite/runes-client": "^0.5.22",
+    "@dashkite/scout": "^0.8.23"
   }
 }
