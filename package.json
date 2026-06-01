@@ -53,7 +53,7 @@
   },
   "dependencies": {
     "@dashkite/bake": "^0.0.6",
-    "@dashkite/generic": "^0.9.17",
+    "@dashkite/generic": "^0.9.19",
     "@dashkite/http-headers": "^0.12.37",
     "@dashkite/joy": "^0.12.25",
     "@dashkite/runes-client": "^0.5.17",
