@@ -45,18 +45,18 @@
     "@dashkite/amen": "^0.5.0",
     "@dashkite/amen-console": "^0.4.0",
     "@dashkite/assert": "^0.3.0",
-    "@dashkite/genie": "^0.20.24",
+    "@dashkite/genie": "^0.20.25",
     "@dashkite/genie-clean": "^0.9.0",
     "@dashkite/genie-coffee": "^0.9.0",
-    "@dashkite/genie-module": "^0.5.53",
-    "@dashkite/genie-release": "^0.5.13"
+    "@dashkite/genie-module": "^0.5.54",
+    "@dashkite/genie-release": "^0.5.14"
   },
   "dependencies": {
     "@dashkite/bake": "^0.0.6",
-    "@dashkite/generic": "^0.9.28",
-    "@dashkite/http-headers": "^0.12.48",
-    "@dashkite/joy": "^0.12.36",
-    "@dashkite/runes-client": "^0.5.28",
+    "@dashkite/generic": "^0.9.30",
+    "@dashkite/http-headers": "^0.12.49",
+    "@dashkite/joy": "^0.12.38",
+    "@dashkite/runes-client": "^0.5.29",
     "@dashkite/scout": "^0.8.29"
   }
 }
